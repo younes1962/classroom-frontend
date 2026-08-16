@@ -24,16 +24,16 @@ const SubjectsList = () => {
     const  subjectsTable= useTable<Subject>({
         columns: useMemo<ColumnDef <Subject> []> (()=>[
             {
-            id: "code",
-            accessorKey: "code",
+            id: 'code',
+            accessorKey: 'code',
             size:100,
             header:()=><p className="column-title ml-2">code</p>,
             cell:({getValue})=>
                 <Badge>{getValue<string>()}</Badge>,
             },
             {
-                id: "name",
-                accessorKey: "name",
+                id: 'name',
+                accessorKey: 'name',
                 size:200,
                 header:()=><p className="column-title ml-2">name</p>,
                 cell:({getValue})=>
@@ -41,8 +41,8 @@ const SubjectsList = () => {
                 filterFn:'includesString'
             },
             {
-                id: "department",
-                accessorKey: "department",
+                id: 'department',
+                accessorKey: 'department.name',
                 size:200,
                 header:()=><p className="column-title ml-2">department</p>,
                 cell:({getValue})=>
@@ -50,8 +50,8 @@ const SubjectsList = () => {
                 filterFn:'includesString'
             },
             {
-                id: "description",
-                accessorKey: "description",
+                id: 'description',
+                accessorKey: 'description',
                 size:300,
                 header:()=><p className="column-title ml-2">description</p>,
                 cell:({getValue})=>
